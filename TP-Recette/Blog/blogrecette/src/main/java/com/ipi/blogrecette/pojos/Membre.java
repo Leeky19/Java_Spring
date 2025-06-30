@@ -30,6 +30,10 @@ public class Membre {
         this.recettes = recettes;
     }
 
+    public Membre() {
+        //TODO Auto-generated constructor stub
+    }
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

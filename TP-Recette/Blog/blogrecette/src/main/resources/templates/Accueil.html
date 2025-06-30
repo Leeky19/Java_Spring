@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Mon Blog de Recettes</title>
+</head>
+<body>
+
+<header id="header">
+    <a href="/"><h1 id="titreBlog">Mon Blog de Recettes</h1></a>
+    <div style="width:300px;margin:20px auto;">Bienvenue sur mon blog de recettes</div>
+    <div id="loginBar">
+        <div class="login">
+            <a class="primaryBtn login" href="/inscription">Inscription</a>
+        </div>
+    </div>
+</header>
+
+<div id="global">
+    <div id="categorie">
+        <ul>
+            <li><a href="/categorie?idCategorie=1">Entrée</a></li>
+            <li><a href="/categorie?idCategorie=2">Plat principal</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <div th:each="recette : ${recettes}">
+            <article>
+                <header>
+                    <img class="imgRecette" th:src="@{'/img/' + ${recette.image}}" width="300px" height="242px"
+                         th:alt="${recette.nom}" />
+                    <a th:href="@{'/recette?id=' + ${recette.id}}">
+                        <h1 class="titreRecette" th:text="${recette.nom}">Nom de la recette</h1>
+                    </a>
+                    <time th:text="${#dates.format(recette.dateCreation, 'dd/MM/yyyy')}">01/01/2020</time>
+                </header>
+                <p th:text="${recette.description}">Description ici</p>
+            </article>
+            <hr />
+        </div>
+    </div>
+</div>
+
+<footer id="piedBlog">
+    Blog réalisé par
+</footer>
+
+</body>
+</html>

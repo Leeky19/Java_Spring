@@ -29,6 +29,9 @@ public class Recette {
     @OneToMany(mappedBy = "recette")
     private List<Commentaire> commentaires;
 
+    public Recette() {
+    }
+
     public Recette(Long id, String titre, String description, String author, String photo, Date dateCreation,
                    Membre membre, Categorie categorie, List<Ingredient> ingredients, List<Commentaire> commentaires) {
         this.id = id;
