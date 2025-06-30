@@ -31,7 +31,7 @@ public class Membre {
     }
 
     public Membre() {
-        //TODO Auto-generated constructor stub
+        // Default constructor
     }
 
     public Long getId() { return id; }

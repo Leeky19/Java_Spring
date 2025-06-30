@@ -13,4 +13,5 @@ public interface RecetteDao extends JpaRepository<Recette, Long> {
     // Par dérivation
     List<Recette> findByMembre(Membre membre);
     List<Recette> findByCategorie(Categorie categorie);
+    List<Recette> findByCategorieId(Long idcategorie);
 }

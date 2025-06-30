@@ -27,6 +27,18 @@ public class Commentaire {
         this.recette = recette;
     }
 
+    public Commentaire(String auteur, String contenu, int note, Date dateCreation, Recette recette) {
+        this.auteur = auteur;
+        this.contenu = contenu;
+        this.note = note;
+        this.dateCreation = dateCreation;
+        this.recette = recette;
+    }
+   
+    public Commentaire() {
+        // Default constructor
+    }
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

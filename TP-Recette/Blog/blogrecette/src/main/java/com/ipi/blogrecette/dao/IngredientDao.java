@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface IngredientDao extends JpaRepository<Ingredient, Long> {
     List<Ingredient> findByRecette(Recette recette);
+    List<Ingredient> findByRecetteId(Long recetteId);
 }

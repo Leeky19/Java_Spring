@@ -24,6 +24,9 @@ public class Ingredient {
         this.recette = recette;
     }
 
+        public Ingredient() {
+    }
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

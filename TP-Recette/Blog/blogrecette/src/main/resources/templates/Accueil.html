@@ -29,10 +29,10 @@
         <div th:each="recette : ${recettes}">
             <article>
                 <header>
-                    <img class="imgRecette" th:src="@{'/img/' + ${recette.image}}" width="300px" height="242px"
-                         th:alt="${recette.nom}" />
+                    <img class="imgRecette" th:src="@{'/img/' + ${recette.photo}}" width="300px" height="242px"
+                         th:alt="${recette.titre}" />
                     <a th:href="@{'/recette?id=' + ${recette.id}}">
-                        <h1 class="titreRecette" th:text="${recette.nom}">Nom de la recette</h1>
+                        <h1 class="titreRecette" th:text="${recette.titre}">Nom de la recette</h1>
                     </a>
                     <time th:text="${#dates.format(recette.dateCreation, 'dd/MM/yyyy')}">01/01/2020</time>
                 </header>
@@ -44,7 +44,7 @@
 </div>
 
 <footer id="piedBlog">
-    Blog réalisé par
+    Blog réalisé par Yuri et Julien
 </footer>
 
 </body>

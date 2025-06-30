@@ -1,0 +1,102 @@
+<!doctype html> 
+<html lang="fr"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="css/style.css" /> 
+    <title>Mon Blog de Recette - Tartiflette</title> 
+</head> 
+<body> 
+ 
+    <header id="header"> 
+        <a href="accueil"><h1 id="titreBlog">Mon Blog de Recettes</h1></a> 
+        <div style="width:300px;margin:20px auto;">Bienvenue sur mon blog de 
+recettes</div> 
+        <div id="loginBar"> 
+            <div class="login"> 
+                <a class="primaryBtn login" href="inscription">Inscription</a> 
+            </div> 
+        </div> 
+    </header> 
+ 
+    <div id="global"> 
+        <article> 
+            <header> 
+                <img class="imgRecette" src="img/tartiflette.jpg" alt="Tartiflette" /> 
+                <h1 class="titreRecette"> 
+                    Tartiflette 
+                </h1> 
+                <span class="fa fa-star checked"></span> 
+                <span class="fa fa-star checked"></span> 
+                <span class="fa fa-star checked"></span> 
+                <span class="fa fa-star checked"></span> 
+                <span class="fa fa-star"></span> 
+                </br> 
+                <time> 
+                    07/01/2019 
+                </time> 
+            </header> 
+            <p> 
+                La tartiflette savoyarde est un gratin de pommes de terre avec du 
+Reblochon fondu dessus 
+            </p> 
+        </article> 
+        <hr />         
+        <header> 
+            <h2 id="titreIngredient"> 
+                Ingrédients  
+            </h2> 
+            <ul> 
+                <li>750 g Pommes de terre</li> 
+                <li>1 u Reblochon</li> 
+                <li>200 g Lardons</li> 
+                <li>3 cs Crème fraîche épaisse</li> 
+                <li>2 u Oignons</li> 
+                <li>20 g Beurre</li> 
+                <li>1 cc Sel</li> 
+                <li>1 p Poivre</li> 
+            </ul> 
+        </header> 
+ 
+        <h2 id="titreCommentaire"> 
+            Commentaires 
+        </h2> 
+ 
+        <div class="divCommentaire">  
+      <p>Nicolas : Super recette </p> 
+      <p> Note : 5/5 </p> 
+            <p> 
+          09/01/2019 
+            </p> 
+            <hr> 
+     </div>  
+ 
+        <form method="post" action="recette?id=" > 
+   <input id="auteur" name="auteur" type="text" placeholder="Votre 
+nom *" class="inputChamp" /><br /> 
+   <textarea id="txtCommentaire" name="contenu" rows="4" 
+placeholder="Votre commentaire *" class="inputTextArea" ></textarea><br/> 
+   <label for="note">Note</label><br /> 
+            <select name="note" id="note" class="select"> 
+                <option value="1">1</option> 
+                <option value="2">2</option> 
+                <option value="3">3</option> 
+                <option value="4">4</option> 
+                <option value="5">5</option> 
+            </select> 
+   <br /> 
+   <input type="submit" value="Commenter" class="submitBtn" /> 
+  </form> 
+  <div id="erreur"> 
+   <p> Erreurs </p> 
+  </div>  
+ 
+    </div> 
+ 
+  <footer id="piedBlog"> 
+  Blog réalisé par Yuri et Julien
+        </footer> 
+ 
+</body> 
+</html>

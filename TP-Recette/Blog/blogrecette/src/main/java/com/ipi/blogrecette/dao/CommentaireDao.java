@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface CommentaireDao extends JpaRepository<Commentaire, Long> {
     List<Commentaire> findByRecette(Recette recette);
+    List<Commentaire> findByRecetteId(Long recetteId);
 }
